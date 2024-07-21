@@ -1,0 +1,2 @@
+CREATE TABLE transactions (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, username TEXT NOT NULL, type TEXT NOT NULL, symbol TEXT NOT NULL, price REAL NOT NULL, shares INTEGER NOT NULL, timestamp TEXT NOT NULL DEFAULT current_timestamp);
+SELECT symbol, SUM(shares) AS total_shares FROM transactions WHERE username='Steven'AND type='buy' GROUP BY symbol;
