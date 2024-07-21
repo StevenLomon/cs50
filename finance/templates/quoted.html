@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stock price for {{ symbol }}
+{% endblock %}
+
+{% block main %}
+    <h4>The current price for {{ symbol }} is {{ price | usd }}!</h4>
+{% endblock %}
